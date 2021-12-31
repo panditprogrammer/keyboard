@@ -4,10 +4,18 @@
     box-sizing: content-box;
 }
 
+:root{
+    --p_c: #646363;
+    --s_c: #696969;
+    --blk_c: black;
+    --wht_c: #dfdfdf;
+
+}
+
 body{
     height: 100vh;
     width: 100%;
-    background-color: #dfdfdf;
+    background-color: var(--wht_c);
 }
 
 header{
@@ -25,7 +33,7 @@ header .logo{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 15px 30px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 15px 30px #ffffff33;
 }
 
 header .logo img{
@@ -43,7 +51,7 @@ header .menu{
 }
 
 header .menu a{
-    color: #dfdfdf;
+    color: var(--wht_c);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
     text-transform: capitalize;
@@ -52,8 +60,8 @@ header .menu a{
 }
 
 header .menu a:hover{
-    background-color: #696969;
-    color: #dfdfdf;
+    background-color: var(--s_c);
+    color: var(--wht_c);
 
 
 }
@@ -63,15 +71,15 @@ header .menu a:hover{
     height: fit-content;
     margin: 2rem auto;
     padding: 10px;
-    background-color: #696969;
+    background-color: var(--s_c);
     border-radius: 0.6rem;
-    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 10%);
+    box-shadow: 0px 15px 30px 0px #00000033;
 }
 
 .main_container{
     width: fit-content;
     height: fit-content;
-    background-color: #646363;
+    background-color: var(--p_c);
     border: 1px solid #424242;
     user-select: none;
 
@@ -84,17 +92,39 @@ header .menu a:hover{
     align-items: center;
 }
 
+.row_0{
+    margin-bottom: 8px;
+}
+
 .btn{
     width: 50px;
     height: 48px;
     margin: 1px;
     background-color: #838383;
-    color: #dfdfdf;
+    color: var(--wht_c);
     cursor: pointer;
     border-radius: 3px;
     border-color: #777777;
     box-shadow: 0px 19px 30px rgb(0 0 0 / 20%), inset 10px 20px 30px rgb(0 0 0 / 20%), inset 5px 6px 10px rgb(0 0 0 / 20%);
 
+}
+
+.row_0 .btn{
+  height: 30px;
+  margin-right: 0px !important;
+}
+
+.row_0 .btn_:nth-child(2){
+    visibility: hidden;
+}
+
+.row_0 .btn_:nth-child(7){
+    width: 26px !important;
+    visibility: hidden;
+}
+.row_0 .btn_:nth-child(12){
+    width: 26px !important;
+    visibility: hidden;
 }
 
 .btn_Backspace{
@@ -144,7 +174,7 @@ footer{
     background-color: black;
     position: absolute;
     bottom: 0px;
-    color: #646363;
+    color: var(--p_c);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -156,5 +186,5 @@ footer .copy,.info{
 }
 
 footer a{
-    color: #646363;
+    color: var(--p_c);
 }
